@@ -1,0 +1,50 @@
+###################################################################
+####### 			Autor: Santiago Gil Begué 				#######
+###################################################################
+
+¡Importante! Para ejecutar el programa desarrollado se necesita
+tener instalado Python y la librería Biopython.
+
+Este tutorial explica fácilmente cómo instalarlos.
+
+> http://biopython.org/DIST/docs/install/Installation.html
+
+###################################################################
+### 				Ejecutar el programa 						###
+###################################################################
+
+$> python conservation.py <file_sequences> <format> [ -top <percentage> ]
+
+<file_sequences> es el fichero de entrada con todas las secuencias.
+
+<format> es el formato en el que se encuentra el fichero input.
+Se soportan varios formatos (fasta, genbank, ...). Para ver todos
+los formatos soportados ejecutar el programa sin ningún parámetro.
+
+$> python conservation.py
+
+Para ver un detalle más explicativo de cierto formato, ejecutar:
+
+$> python conservation.py -h <format>
+
+El programa imprimirá por salida estándar el índice de conservación
+para cada posición del alineamiento. Opcionalmente, si se quiere
+guardar la salida en un fichero output, se puede redireccionar
+la salida al fichero:
+
+$> python conservation.py <file_sequences> <format> > output
+
+El programa permite imprimir únicamente las posiciones y su valor
+de conservación más sospechosas de ser mutaciones o errores de
+secuenciación, es decir, tienen un valor cercano a cero, sin
+tomar este valor nulo. Para ello, utilizar la opción -top e
+indicar el porcentaje en un rango de 0 a 1 de posiciones más
+sospechosas que se quiere obtener.
+
+Por ejemplo, para obtener el 10%, ejecutar:
+
+$> python conservation.py <file_sequences> <format> -top 0.1
+
+Igualmente, se puede redireccionar a un fichero de salida:
+
+$> python conservation.py <file_sequences> <format> -top 0.1 > output
