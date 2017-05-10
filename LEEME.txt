@@ -1,16 +1,16 @@
 ###################################################################
-####### 			Autor: Santiago Gil Begué 				#######
+#######               Autor: Santiago Gil BeguÃ©             #######
 ###################################################################
 
-¡Importante! Para ejecutar el programa desarrollado se necesita
-tener instalado Python y la librería Biopython.
+Â¡Importante! Para ejecutar el programa desarrollado se necesita
+tener instalado Python y la librerÃ­a Biopython.
 
-Este tutorial explica fácilmente cómo instalarlos.
+Este tutorial explica fÃ¡cilmente cÃ³mo instalarlos.
 
 > http://biopython.org/DIST/docs/install/Installation.html
 
 ###################################################################
-### 				Ejecutar el programa 						###
+###                     Ejecutar el programa                    ###
 ###################################################################
 
 $> python conservation.py <file_sequences> <format> [ -top <percentage> ]
@@ -19,26 +19,26 @@ $> python conservation.py <file_sequences> <format> [ -top <percentage> ]
 
 <format> es el formato en el que se encuentra el fichero input.
 Se soportan varios formatos (fasta, genbank, ...). Para ver todos
-los formatos soportados ejecutar el programa sin ningún parámetro.
+los formatos soportados ejecutar el programa sin ningÃºn parÃ¡metro.
 
 $> python conservation.py
 
-Para ver un detalle más explicativo de cierto formato, ejecutar:
+Para ver un detalle mÃ¡s explicativo de cierto formato, ejecutar:
 
 $> python conservation.py -h <format>
 
-El programa imprimirá por salida estándar el índice de conservación
-para cada posición del alineamiento. Opcionalmente, si se quiere
+El programa imprimirÃ¡ por salida estÃ¡ndar el Ã­ndice de conservaciÃ³n
+para cada posiciÃ³n del alineamiento. Opcionalmente, si se quiere
 guardar la salida en un fichero output, se puede redireccionar
 la salida al fichero:
 
 $> python conservation.py <file_sequences> <format> > output
 
-El programa permite imprimir únicamente las posiciones y su valor
-de conservación más sospechosas de ser mutaciones o errores de
-secuenciación, es decir, tienen un valor cercano a cero, sin
-tomar este valor nulo. Para ello, utilizar la opción -top e
-indicar el porcentaje en un rango de 0 a 1 de posiciones más
+El programa permite imprimir Ãºnicamente las posiciones y su valor
+de conservaciÃ³n mÃ¡s sospechosas de ser mutaciones o errores de
+secuenciaciÃ³n, es decir, tienen un valor cercano a cero, sin
+tomar este valor nulo. Para ello, utilizar la opciÃ³n -top e
+indicar el porcentaje en un rango de 0 a 1 de posiciones mÃ¡s
 sospechosas que se quiere obtener.
 
 Por ejemplo, para obtener el 10%, ejecutar:
